@@ -32,3 +32,5 @@ var symbolType2 = Symbol('name')
 // == 数据类型转换，如果类型不同，先转换类型，再比较
 // === 严格相等
 console.log(symbolType1 === symbolType2)
+
+// 6. typeof 查看数据的类型
