@@ -11,10 +11,24 @@ console.log(true && false)
 console.log(false || false)
 
 const name = 'pjw'
-if (name === 'pjw') {
-  console.log('是pjw')
-} else if (name === 'ceshi') {
-  console.log('是ceshi')
-} else {
-  console.log('是其他')
+// if (name === 'pjw') {
+//   console.log('是pjw')
+// } else if (name === 'ceshi') {
+//   console.log('是ceshi')
+// } else {
+//   console.log('是其他')
+// }
+
+switch(name) {
+  case 'pjw': {
+    console.log('名字是pjw')
+    // break
+  }
+  case 1: {
+    console.log('名字是ceshi')
+    // break
+  }
+  default: {
+    console.log('名字是其他')
+  }
 }
