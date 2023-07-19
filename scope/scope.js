@@ -17,9 +17,12 @@ fn()
 // 3. 块级别作用域
 // const let // 声明块作用域
 {
-  let c = 1
-  var d = 2
-  console.log(a)
+  let pjwOut = '12345'
+  {
+    console.log(a)
+    let pjw = 1
+  }
+  // console.log(pjw)
 }
 
 // 作用域查找时，先找当前作用域，再找上一级作用域，直到全局作用域
