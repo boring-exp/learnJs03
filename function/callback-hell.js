@@ -9,17 +9,16 @@ const fn = function (params) {
   console.log(params)
   network(`${params.data}|second`, function (params) {
     console.log(params);
-    network(`${params.data}|third`, function (params) {
-      console.log(params);
-      network(`${params.data}|forth`, function (params) {
-        console.log(params);
-        network(`${params.data}|fifth`, function (params) {
-          console.log(params);
-        })
-      })
-    })
+    // network(`${params.data}|third`, function (params) {
+    //   console.log(params);
+    //   network(`${params.data}|forth`, function (params) {
+    //     console.log(params);
+    //     network(`${params.data}|fifth`, function (params) {
+    //       console.log(params);
+    //     })
+    //   })
+    // })
   })
-  // 在这里才能获取平台函数的返回值
 }
 
 network('first', fn)
