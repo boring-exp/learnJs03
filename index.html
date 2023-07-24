@@ -5,12 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script type="text/javascript" src="./index.js">
-  </script>
+  <!-- <script type="text/javascript" src="./index.js"> -->
+  <!-- </script> -->
+  <style>
+    .test {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
 </head>
 
 <body>
-  <div></div>
+  <div class="test" id="test"></div>
 </body>
+<script>
+  window.addEventListener('click', () => {
+    console.log('hello')
+  })
 
+  document.getElementsByClassName('test')[0].addEventListener('click', () => {
+    console.log('test')
+  })
+</script>
 </html>
