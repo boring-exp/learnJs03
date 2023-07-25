@@ -46,14 +46,32 @@ const bindSayHi = freeSayHi.bind(test)
 bindSayHi('bind', 100)
 
 // TODO: 用apply和call，实现自定义myBind
-
+Function.prototype.myBind = function (thisArg, ...args) {
+  const fn = this
+  return function (...args2) {
+    fn.apply(thisArg, [...args, ...args2])
+  }
+}
 // TODO: 实现函数柯里化myCurrying函数
-function add(a, b, c) {}
+function add(a, b, c) { return a + b + c }
 const curryingadd = myCurrying(add)
-curryingadd(1)(2)(3)
-function addFour(a, b, c, d) {}
+console.log(curryingadd(1)(2)(3))
+function addFour(a, b, c, d) { return a + b + c + d }
 const curryingaddFour = myCurrying(addFour)
-curryingaddFour(1)(2)(3)(4)
+console.log(curryingaddFour(1)(2)(3)(4))
+
+function myCurrying(fn) {
+  const args = []
+  function inner() {
+    args.push(...arguments)
+    if (args.length === fn.length) {
+      return fn(...args)
+    } else {
+      return inner
+    }
+  }
+  return inner
+}
 
 
 
