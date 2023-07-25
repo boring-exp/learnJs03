@@ -30,6 +30,23 @@ console.log(obj1.getName());
 obj1.who()
 
 // 请仿写数组的yourselfForeach方法
-const arr = []
+const arr = [1, 2, 3]
 // TODO: arr.yourselfForeach((item) => {console.log(item)})
 // arr.forEach((item) => {console.log(item)})
+Array.prototype.yourselfForeach = function (callback) {
+  console.log(this)
+  for (let i = 0; i < this.length; i++) {
+    callback(this[i], i, this)
+  }
+}
+Array.prototype.yourselfMap = function (callback) {
+  console.log(this)
+  const reuslt = []
+  for (let i = 0; i < this.length; i++) {
+    reuslt.push(callback(this[i], i, this))
+  }
+  return reuslt
+}
+arr.yourselfForeach((item) => { console.log(item) })
+const reuslt = arr.yourselfMap(item => item + 1)
+console.log(reuslt)

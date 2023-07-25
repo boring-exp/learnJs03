@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}\\function\\proto-chain.js",
+      "program": "${workspaceFolder}\\function\\change-this.js",
     }
   ]
 }
