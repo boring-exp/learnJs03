@@ -27,4 +27,4 @@ Array.prototype.hello = function() {
   return 1;
 }
 
-console.log(arr.hello())
+console.log(Object.getPrototypeOf(arr) === Array.prototype)
