@@ -11,7 +11,8 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}\\oop\\es6.js",
+      "program": "${workspaceFolder}\\function\\tail.js",
+      "args": ["--harmony_tailcalls"]
     }
   ]
 }
