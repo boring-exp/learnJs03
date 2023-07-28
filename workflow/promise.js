@@ -30,3 +30,10 @@ network().then((data) => {
 }).then((data) => {
   console.log(data)
 })
+
+// 实现sleep函数
+function sleep(time) {}
+console.log('start')
+sleep(3000).then(() => {
+  console.log('hello world')
+})
