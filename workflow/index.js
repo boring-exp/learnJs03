@@ -6,7 +6,7 @@
 function network(callback) {
   // 2. 异步
   setTimeout(() => {
-    callback('callback')
+    callback(()=> console.log('hello world'))
   }, 3000)
 }
 
