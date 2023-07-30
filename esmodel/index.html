@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>哈哈哈</h1>
+  <!-- <script src="./src/index.js" type="module">
+  </script> -->
+
+  <script type="module">
+    // 几乎这个模块所有的内容，都会用到
+    // 否则，仅使用结构语法{}
+    import * as indexModule from './src/index.js'; // 取的是默认导出
+    import { testFn as moduleUniqueFn, test as c, user } from './src/index.js'
+    console.log(indexModule)
+    indexModule.testFn()
+    moduleUniqueFn()
+    setInterval(() => {
+      console.log(user.name, indexModule.test, 'index.html')
+    }, 1000)
+    // testFn()
+  </script>
+</body>
+
+</html>
