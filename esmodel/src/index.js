@@ -5,11 +5,11 @@ const user = {
   name: 1,
 }
 
-setInterval(() => {
-  user.name += 1 // user.name = user.name + 1
-  a++
-  console.log(user.name, a, 'index.js')
-}, 1000)
+// setInterval(() => {
+//   user.name += 1 // user.name = user.name + 1
+//   a++
+//   console.log(user.name, a, 'index.js')
+// }, 1000)
 
 function testFn() {
   console.log('testFn')

@@ -5,26 +5,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- <script src="https://code.jquery.com/jquery-3.7.0.js"></script> -->
+  <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
 </head>
 
 <body>
 
-  <h1>哈哈哈</h1>
+  <div id="vueapp">{{message}}</div>
+  <script type="importMap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
   <!-- <script src="./src/index.js" type="module">
-  </script> -->
-
+  </scr> -->
   <script type="module">
     // 几乎这个模块所有的内容，都会用到
     // 否则，仅使用结构语法{}
     import * as indexModule from './src/index.js'; // 取的是默认导出
     import { testFn as moduleUniqueFn, test as c, user } from './src/index.js'
     console.log(indexModule)
+    import defautlExport from './src/index.js'
     indexModule.testFn()
     moduleUniqueFn()
-    setInterval(() => {
-      console.log(user.name, indexModule.test, 'index.html')
-    }, 1000)
+    // setInterval(() => {
+    //   console.log(user.name, indexModule.test, 'index.html')
+    // }, 1000)
     // testFn()
+  </script>
+  <script type="module">
+    // import vue from 'vue'
+
+    // import * as vue from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    import * as vue from 'vue'
+    const app = vue.createApp({
+      data() {
+        return {
+          message: 'Hello Vue!'
+        }
+      }
+    })
+    app.mount('#vueapp')
+    console.log(vue)
   </script>
 </body>
 
